@@ -7,6 +7,6 @@ frontApp.listen(3000, () => {
 });
 
 backApp.listen(4000, async () => {
-    await db.sequelize.sync({ force: false });
+    await db.sequelize.sync({ force: true });
     console.log(`Backend server start`);
 });

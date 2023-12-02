@@ -1,36 +1,36 @@
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define(
-        "Boards",
+        "Posts",
         {
-            Board_uid: {
+            Posts_uid: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 primaryKey: true,
                 autoIncrement: true,
             },
-            Board_title: {
+            Posts_title: {
                 type: DataTypes.STRING(255),
                 allowNull: false,
             },
-            Board_content: {
+            Posts_content: {
                 type: DataTypes.TEXT,
                 allowNull: false,
             },
-            Board_writer: {
+            Posts_writer: {
                 type: DataTypes.STRING(50),
                 allowNull: false,
             },
-            Board_created_at: {
+            Posts_created_at: {
                 type: DataTypes.DATE,
                 allowNull: false,
                 defaultValue: sequelize.literal("now()"),
             },
-            Board_hit: {
+            Posts_hit: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 defaultValue: 0,
             },
-            Board_like: {
+            Posts_like: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 defaultValue: 0,

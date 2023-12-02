@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
-            Users_pw: {
+            Users_password: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
@@ -44,6 +44,11 @@ module.exports = (sequelize, DataTypes) => {
             Users_profile: {
                 type: DataTypes.STRING,
                 allowNull: false,
+            },
+            Role_authority: {
+                type: DataTypes.STRING(20),
+                allowNull: false,
+                defaultValue: "user",
             },
         },
         {
